@@ -1,0 +1,15 @@
+n=input('Enter n values');
+t=-n:1:n;
+y1= [zeros(1, n),ones(1, n+1)];
+
+subplot(2,1,1);
+plot(t,y1);
+title("CT Unit step signal")
+ylabel('Amplitude');
+xlabel('time');
+
+subplot(2,1,2);
+stem(t,y1);
+title("DT Unit step signal")
+ylabel('Amplitude');
+xlabel('number of samples');

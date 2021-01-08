@@ -1,0 +1,17 @@
+x=[-2*pi:0.1:2*pi];
+cosine=cos(x);
+subplot(2,1,1)
+plot(x,cosine)
+title("CT Cosine Wave")
+grid on
+xlabel("-2pi<=x<=2pi")
+ylabel("cos(x)")
+
+subplot(2,1,2)
+x=[-2*pi:0.3:2*pi];
+y=cos(x);
+stem(x,y)
+title("DT Cosine Wave")
+grid on
+xlabel("-2pi<=x<=2pi")
+ylabel("cos(x)")

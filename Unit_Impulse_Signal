@@ -1,0 +1,16 @@
+x=-5:5;
+y=(x==0);
+
+subplot(2,1,1)
+plot(x,y);
+title("CT Impulse Signal")
+grid on
+xlabel('time');
+ylabel('amplitude');
+
+subplot(2,1,2)
+stem(x,y);
+title("DT Impulse Signal")
+grid on
+xlabel(' number of samples');
+ylabel('amplitude');

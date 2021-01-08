@@ -1,0 +1,16 @@
+x=linspace(-8,8,100);
+y=sinc(x);
+
+subplot(2,1,1);
+plot(x,y);
+axis([-8 8 -1.1 1.1]);
+xlabel('time');
+ylabel('amplitude');
+title('sinc wave');
+
+subplot(2,1,2);
+stem(x,y);
+axis([-8 8 -1.1 1.1]);
+xlabel('number of samples');
+ylabel('amplitude');
+title('discrete sinc wave');

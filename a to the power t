@@ -1,0 +1,33 @@
+MATLAB code to plot at for a>1, 0<a<1, a<0
+
+% 1)
+t=0:1:30;
+a=input('Enter a value');
+y2=a.^t;
+
+subplot(2,1,1);
+plot(t,y2);
+title("CT exponential signal")
+xlabel('n');
+ylabel('Amplitude');
+
+subplot(2,1,2);
+stem(t,y2);
+title("DT exponential signal")
+xlabel('n');
+ylabel('Amplitude');
+
+% 2)
+n=(0:1:30);
+a=input("enter a value for a");
+y=(a.^n);
+stem(n,y)
+xlabel("n")
+ylabel("a^n")
+if a<0
+    title("a^n when a<0")
+elseif a>1
+    title("a^n when a>1")
+else
+    title("a^n for 0<a<1")
+end

@@ -1,0 +1,14 @@
+n=input('Enter n values');
+t=-n-1:1:n-1;
+
+subplot(2,1,1);
+plot(t,t);
+title("CT Ramp Signal")
+ylabel('Amplitude');
+xlabel('x');
+
+subplot(2,1,2);
+stem(t,t);
+title("DT Ramp signal")
+ylabel('Amplitude');
+xlabel('number of samples');

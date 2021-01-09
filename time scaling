@@ -1,0 +1,16 @@
+n=-3:3;
+x=[1 2 3 4 7 6 5 ];
+scale=input("enter the amount to be scaled");
+
+subplot(2,1,1)
+stem(n,x)
+title("The original signal x[n]")
+xlabel("n")
+ylabel("Amplitude")
+
+subplot(2,1,2)
+stem(n/scale,x)
+title("Time scaled signal")
+xlabel("n")
+ylabel("Amplitude")
+

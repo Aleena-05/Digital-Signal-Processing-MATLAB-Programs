@@ -1,0 +1,67 @@
+fs=8;
+t=0:1/fs:10;
+xn=5*sin(2*pi*t);
+N=length(xn);
+ 
+dft=fft(xn);
+idft=ifft(dft);
+dft
+idft
+ 
+magnitude=abs(dft);
+phase=angle(dft);
+mag=abs(idft);
+ph=angle(idft);
+ 
+subplot(4,2,1)
+stem(t,xn)
+ylabel ('Amplitude');
+xlabel ('Time Index');
+title ('Input Sequence-discrete');
+ 
+subplot(4,2,2)
+plot(t,xn)
+ylabel ('Amplitude');
+xlabel ('Time Index');
+title ('Input Sequence-continuous');
+ 
+% Consider the sine wave, 5sin(2πft) sampled at 8Hz
+%  a.	Find out the DFT of the sampled signal
+%  b.	Find out the IDFT of the DFT obtained previously.
+%  c.	Plot the IDFT obtained in discrete and continuous waveform
+
+subplot(4,2,3)
+stem(t,magnitude)
+ylabel ('Amplitude');
+xlabel ('K');
+title('Magnitude spectrum of DFT')
+ 
+subplot(4,2,4)
+stem(t,phase)
+ylabel ('Amplitude');
+xlabel ('K');
+title('Phase spectrum of DFT')
+ 
+subplot(4,2,5);
+stem(t,mag)
+ylabel ('Amplitude');
+xlabel ('K');
+title ('Magnitude spectrum of IDFT');
+ 
+subplot(4,2,6);
+stem(t,ph)
+ylabel ('Phase');
+xlabel ('K');
+title ('Phase spectrum of IDFT');
+ 
+subplot(4,2,7);
+plot(t,idft);
+ylabel ('amplitude');
+xlabel ('K');
+title ('IDFT sequence-continuous');
+ 
+subplot(4,2,8);
+stem(t,idft);
+ylabel ('amplitude');
+xlabel ('K');
+title ('IDFT sequence-discrete');

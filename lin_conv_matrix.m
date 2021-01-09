@@ -1,3 +1,5 @@
+%linear convolution using matrix method
+
 xn=input('Enter the first input sequence:');
 hn=input('Enter the system response sequence:');
 n=length(xn);

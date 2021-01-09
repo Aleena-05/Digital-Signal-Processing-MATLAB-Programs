@@ -1,0 +1,15 @@
+n=-3:3;
+x=[1 2 3 4 7 6 5 ];
+shft=input("Enter the amount to be shifted");
+
+subplot(2,1,1)
+stem(n,x)
+title("The original signal x[n]")
+xlabel("n")
+ylabel("Amplitude")
+
+subplot(2,1,2)
+stem(n+(-shft),x)
+title("The shifted signal ")
+xlabel("n")
+ylabel("Amplitude")

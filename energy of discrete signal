@@ -1,0 +1,11 @@
+n=0:1:3;
+x=[1 2 3 4];
+stem(n,x);
+title("Given Signal x[n]")
+xlabel("n")
+ylabel("x[n]")
+for n=0:1:3
+    Energy=sum((abs(x)).^2);
+end
+disp("Energy of x[n] is:")
+disp(Energy)

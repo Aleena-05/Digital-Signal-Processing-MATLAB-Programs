@@ -1,4 +1,4 @@
-%linear convolution using matrix method
+%linear convolution using matrix 
 
 xn=input('Enter the first input sequence:');
 hn=input('Enter the system response sequence:');

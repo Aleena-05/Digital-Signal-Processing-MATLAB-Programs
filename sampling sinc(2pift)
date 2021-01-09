@@ -1,0 +1,56 @@
+fm=input("enter maximum signal frequency:\n");   
+fs2=2*fm
+fs1=input("enter sampling frequency<fs2:\n");                                           
+fs3=input("enter sampling frequency>fs2:\n");     
+   
+t=-1:0.001:1;
+t1=-1:1/fs1:1;
+t2=-1:1/fs2:1;
+t3=-1:1/fs3:1;
+
+s=sinc(2*pi*t*fm);
+s1=sinc(2*pi*fm*t1);
+s2=sinc(2*pi*fm*t2);
+s3=sinc(2*pi*fm*t3);
+
+subplot(4,2,1)
+plot(t,s)
+title('Continuous sinc signal');
+xlabel('t');                     
+ylabel('x(t)');  
+
+subplot(4,2,2)
+stem(t1,s1)
+title('fs<2fm:discrete');
+xlabel('n');                     
+ylabel('x(n)'); 
+ 
+subplot(4,2,3)
+plot(t1,s1)
+title('fs<2fm:continuous');
+xlabel('t');                     
+ylabel('x(t)');  
+
+subplot(4,2,4)
+stem(t2,s2)
+title('fs=2fm:discrete');
+xlabel('n');                     
+ylabel('x(n)'); 
+
+subplot(4,2,5)
+plot(t2,s2) 
+title('fs=2fm:continuous');
+xlabel('t');                     
+ylabel('x(t)'); 
+
+subplot(4,2,6)
+stem(t3,s3)
+title('fs>2fm:discrete');
+xlabel('n');                     
+ylabel('x(n)'); 
+
+subplot(4,2,7)
+plot(t3,s3)
+title('fs>2fm:continuous');
+xlabel('t');                     
+ylabel('x(t)');  
